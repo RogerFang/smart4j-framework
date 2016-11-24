@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.roger</groupId>
+        <artifactId>smart4j</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>smart-web-demo</artifactId>
+    <packaging>war</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!--PLUGIN start-->
+        <jetty-plugin.version>9.2.18.v20160721</jetty-plugin.version>
+        <!--PLUGIN end-->
+
+        <!--other-->
+        <jetty-port.version>80</jetty-port.version>
+        <jetty-path.version>/</jetty-path.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.roger</groupId>
+            <artifactId>smart-framework</artifactId>
+        </dependency>
+    </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jetty-plugin.version}</version>
+                <configuration>
+                    <httpConnector>
+                        <port>${jetty-port.version}</port>
+                    </httpConnector>
+                    <stopKey>shutdown</stopKey>
+                    <stopPort>9999</stopPort>
+                    <webApp>
+                        <contextPath>${jetty-path.version}</contextPath>
+                    </webApp>
+                    <!--<scanIntervalSeconds>2</scanIntervalSeconds>-->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

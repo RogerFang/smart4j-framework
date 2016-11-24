@@ -5,105 +5,22 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.roger</groupId>
-    <artifactId>smart4j-framework</artifactId>
+    <artifactId>smart4j</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>smart-framwork</module>
+        <module>smart-web-demo</module>
+    </modules>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.roger</groupId>
+                <artifactId>smart-framework</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
-    <properties>
-        <servlet-api.version>3.1.0</servlet-api.version>
-        <jsp.version>2.2</jsp.version>
-        <jstl.version>1.2</jstl.version>
-
-        <mysql-connector-java.version>5.1.38</mysql-connector-java.version>
-
-        <jackson-databind.version>2.7.4</jackson-databind.version>
-
-        <commons-lang3.version>3.4</commons-lang3.version>
-        <commons-collections4.version>4.1</commons-collections4.version>
-        <commons-dbutils.version>1.6</commons-dbutils.version>
-        <commons-dbcp2.version>2.1.1</commons-dbcp2.version>
-
-        <slf4j-log4j12.version>1.7.21</slf4j-log4j12.version>
-
-        <junit.version>4.12</junit.version>
-    </properties>
-
-    <dependencies>
-
-        <!-- Servlet -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>${servlet-api.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <!-- JSP -->
-        <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>jsp-api</artifactId>
-            <version>${jsp.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <!-- jstl -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>${jstl.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-
-        <!-- jackson (json序列化工具) -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>${jackson-databind.version}</version>
-        </dependency>
-
-        <!-- apache commons lang -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>${commons-lang3.version}</version>
-        </dependency>
-        <!-- apache commons collections -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-collections4</artifactId>
-            <version>${commons-collections4.version}</version>
-        </dependency>
-        <!-- apache commons dbutils (轻量级JDBC类库) -->
-        <dependency>
-            <groupId>commons-dbutils</groupId>
-            <artifactId>commons-dbutils</artifactId>
-            <version>${commons-dbutils.version}</version>
-        </dependency>
-        <!-- apache commons dbcp -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-dbcp2</artifactId>
-            <version>${commons-dbcp2.version}</version>
-        </dependency>
-
-        <!-- mysql -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector-java.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-
-        <!-- slf4j -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>${slf4j-log4j12.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
 </project>
