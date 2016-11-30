@@ -21,7 +21,7 @@
 
         <!--other-->
         <jetty-port.version>80</jetty-port.version>
-        <jetty-path.version>/</jetty-path.version>
+        <jetty-path.version>/smart</jetty-path.version>
     </properties>
 
     <dependencies>

@@ -1,0 +1,133 @@
+14:10:24,314 DEBUG com.roger.demo.aspect.ControllerAspect (23) - ------begin-------
+14:10:24,318 DEBUG com.roger.demo.aspect.ControllerAspect (28) - class: com.roger.demo.web.IndexController
+14:10:24,318 DEBUG com.roger.demo.aspect.ControllerAspect (29) - method: index
+14:10:24,337 DEBUG com.roger.demo.aspect.ControllerAspect (35) - time: 18ms
+14:10:24,338 DEBUG com.roger.demo.aspect.ControllerAspect (40) - ------end-------
+14:11:44,666 DEBUG com.roger.demo.aspect.ControllerAspect (23) - ------begin------
+14:11:44,667 DEBUG com.roger.demo.aspect.ControllerAspect (28) - class: com.roger.demo.web.IndexController
+14:11:44,667 DEBUG com.roger.demo.aspect.ControllerAspect (29) - method: list
+14:11:44,668 DEBUG com.roger.demo.aspect.ControllerAspect (35) - time: 1ms
+14:11:44,668 DEBUG com.roger.demo.aspect.ControllerAspect (40) - ------end-------
+14:13:51,743 DEBUG com.roger.demo.aspect.ControllerAspect (23) - ------begin------
+14:13:51,744 DEBUG com.roger.demo.aspect.ControllerAspect (28) - class: com.roger.demo.web.IndexController
+14:13:51,745 DEBUG com.roger.demo.aspect.ControllerAspect (29) - method: list
+14:13:51,745 DEBUG com.roger.demo.aspect.ControllerAspect (35) - time: 0ms
+14:13:51,745 DEBUG com.roger.demo.aspect.ControllerAspect (40) - ------end-------
+14:14:15,648 DEBUG com.roger.demo.aspect.ControllerAspect (23) - ------begin------
+14:14:15,650 DEBUG com.roger.demo.aspect.ControllerAspect (28) - class: com.roger.demo.web.IndexController
+14:14:15,651 DEBUG com.roger.demo.aspect.ControllerAspect (29) - method: list
+14:14:15,712 DEBUG com.roger.demo.aspect.ControllerAspect (23) - ------begin------
+14:14:15,713 DEBUG com.roger.demo.aspect.ControllerAspect (28) - class: com.roger.demo.web.IndexController
+14:14:15,713 DEBUG com.roger.demo.aspect.ControllerAspect (29) - method: toString
+14:14:15,717 DEBUG com.roger.demo.aspect.ControllerAspect (23) - ------begin------
+14:14:15,718 DEBUG com.roger.demo.aspect.ControllerAspect (28) - class: com.roger.demo.web.IndexController
+14:14:15,718 DEBUG com.roger.demo.aspect.ControllerAspect (29) - method: hashCode
+14:14:15,718 DEBUG com.roger.demo.aspect.ControllerAspect (35) - time: 0ms
+14:14:15,719 DEBUG com.roger.demo.aspect.ControllerAspect (40) - ------end-------
+14:14:15,719 DEBUG com.roger.demo.aspect.ControllerAspect (35) - time: 1ms
+14:14:15,719 DEBUG com.roger.demo.aspect.ControllerAspect (40) - ------end-------
+14:14:19,145 DEBUG com.roger.demo.aspect.ControllerAspect (35) - time: 3427ms
+14:14:19,145 DEBUG com.roger.demo.aspect.ControllerAspect (40) - ------end-------
+15:00:30,158 DEBUG com.roger.demo.aspect.ControllerAspect (23) - ------begin------
+15:00:30,161 DEBUG com.roger.demo.aspect.ControllerAspect (28) - class: com.roger.demo.web.IndexController
+15:00:30,161 DEBUG com.roger.demo.aspect.ControllerAspect (29) - method: index
+15:00:30,202 ERROR org.smart4j.framework.proxy.AspectProxy (35) - proxy failure
+java.lang.NullPointerException
+	at com.roger.demo.web.IndexController.index(IndexController.java:26)
+	at com.roger.demo.web.IndexController$$EnhancerByCGLIB$$42abcb3.CGLIB$index$0(<generated>)
+	at com.roger.demo.web.IndexController$$EnhancerByCGLIB$$42abcb3$$FastClassByCGLIB$$3ae9965c.invoke(<generated>)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.smart4j.framework.proxy.ProxyChain.doProxyChain(ProxyChain.java:71)
+	at org.smart4j.framework.proxy.AspectProxy.doProxy(AspectProxy.java:29)
+	at org.smart4j.framework.proxy.ProxyChain.doProxyChain(ProxyChain.java:69)
+	at org.smart4j.framework.proxy.ProxyManager$1.intercept(ProxyManager.java:21)
+	at com.roger.demo.web.IndexController$$EnhancerByCGLIB$$42abcb3.index(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.smart4j.framework.util.ReflectionUtil.invokeMethod(ReflectionUtil.java:49)
+	at org.smart4j.framework.DispatcherServlet.service(DispatcherServlet.java:102)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:812)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:587)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:577)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)
+	at org.eclipse.jetty.server.handler.ContextHandler.__doHandle(ContextHandler.java:1127)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:110)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:499)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:311)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:544)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Thread.java:745)
+15:00:30,204 DEBUG com.roger.demo.aspect.ControllerAspect (40) - ------end-------
+15:00:30,204 ERROR org.smart4j.framework.util.ReflectionUtil (52) - invoke method failure
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.smart4j.framework.util.ReflectionUtil.invokeMethod(ReflectionUtil.java:49)
+	at org.smart4j.framework.DispatcherServlet.service(DispatcherServlet.java:102)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:812)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:587)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:577)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)
+	at org.eclipse.jetty.server.handler.ContextHandler.__doHandle(ContextHandler.java:1127)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:110)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:499)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:311)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:544)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at com.roger.demo.web.IndexController.index(IndexController.java:26)
+	at com.roger.demo.web.IndexController$$EnhancerByCGLIB$$42abcb3.CGLIB$index$0(<generated>)
+	at com.roger.demo.web.IndexController$$EnhancerByCGLIB$$42abcb3$$FastClassByCGLIB$$3ae9965c.invoke(<generated>)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.smart4j.framework.proxy.ProxyChain.doProxyChain(ProxyChain.java:71)
+	at org.smart4j.framework.proxy.AspectProxy.doProxy(AspectProxy.java:29)
+	at org.smart4j.framework.proxy.ProxyChain.doProxyChain(ProxyChain.java:69)
+	at org.smart4j.framework.proxy.ProxyManager$1.intercept(ProxyManager.java:21)
+	at com.roger.demo.web.IndexController$$EnhancerByCGLIB$$42abcb3.index(<generated>)
+	... 28 more
+15:00:58,650 DEBUG com.roger.demo.aspect.ControllerAspect (23) - ------begin------
+15:00:58,653 DEBUG com.roger.demo.aspect.ControllerAspect (28) - class: com.roger.demo.web.IndexController
+15:00:58,653 DEBUG com.roger.demo.aspect.ControllerAspect (29) - method: index
+15:00:58,976 DEBUG org.smart4j.framework.proxy.TransactionProxy (34) - begin transaction
+15:00:58,983 DEBUG org.smart4j.framework.proxy.TransactionProxy (37) - commit transaction
+15:00:58,984 DEBUG com.roger.demo.aspect.ControllerAspect (35) - time: 330ms
+15:00:58,984 DEBUG com.roger.demo.aspect.ControllerAspect (40) - ------end-------
+15:02:22,567 DEBUG com.roger.demo.aspect.ControllerAspect (23) - ------begin------
+15:02:22,567 DEBUG com.roger.demo.aspect.ControllerAspect (28) - class: com.roger.demo.web.IndexController
+15:02:22,567 DEBUG com.roger.demo.aspect.ControllerAspect (29) - method: index
+15:02:22,567 DEBUG com.roger.demo.aspect.ControllerAspect (35) - time: 0ms
+15:02:22,567 DEBUG com.roger.demo.aspect.ControllerAspect (40) - ------end-------
+15:02:44,596 DEBUG com.roger.demo.aspect.ControllerAspect (23) - ------begin------
+15:02:44,600 DEBUG com.roger.demo.aspect.ControllerAspect (28) - class: com.roger.demo.web.IndexController
+15:02:44,600 DEBUG com.roger.demo.aspect.ControllerAspect (29) - method: transaction
+15:02:44,853 DEBUG org.smart4j.framework.proxy.TransactionProxy (34) - begin transaction
+15:02:44,860 DEBUG org.smart4j.framework.proxy.TransactionProxy (37) - commit transaction
+15:02:44,861 DEBUG com.roger.demo.aspect.ControllerAspect (35) - time: 259ms
+15:02:44,861 DEBUG com.roger.demo.aspect.ControllerAspect (40) - ------end-------

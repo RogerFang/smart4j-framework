@@ -1,7 +1,9 @@
 package com.roger.demo.web;
 
+import com.roger.demo.service.UserService;
 import org.smart4j.framework.annotation.Action;
 import org.smart4j.framework.annotation.Controller;
+import org.smart4j.framework.annotation.Inject;
 import org.smart4j.framework.bean.Data;
 import org.smart4j.framework.bean.View;
 
@@ -13,6 +15,9 @@ import java.util.Map;
  */
 @Controller
 public class IndexController {
+
+    @Inject
+    private UserService userService;
 
     @Action("GET:/")
     public View index(){
@@ -28,5 +33,11 @@ public class IndexController {
         map.put("age", "23");
         Data data = new Data(map);
         return data;
+    }
+
+    @Action("GET:/transaction")
+    public Data transaction(){
+        userService.create(new HashMap<>());
+        return new Data("hello");
     }
 }

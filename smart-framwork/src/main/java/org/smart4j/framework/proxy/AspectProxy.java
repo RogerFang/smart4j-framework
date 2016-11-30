@@ -49,14 +49,34 @@ public abstract class AspectProxy implements Proxy{
         return true;
     }
 
+    /**
+     * 前置增强
+     * @param cls
+     * @param method
+     * @param params
+     */
     public void before(Class<?> cls, Method method, Object[] params){
 
     }
 
+    /**
+     * 后置增强
+     * @param cls
+     * @param method
+     * @param params
+     * @param result
+     */
     public void after(Class<?> cls, Method method, Object[] params, Object result){
 
     }
 
+    /**
+     * 抛出增强
+     * @param cls
+     * @param method
+     * @param params
+     * @param throwable
+     */
     public void error(Class<?> cls, Method method, Object[] params, Throwable throwable){
 
     }

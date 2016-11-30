@@ -8,6 +8,7 @@ import java.util.List;
 
 /**
  * 代理链
+ * 链式代理：可将多个代理串成一条链，然后一个个执行
  * Created by Roger on 2016/11/24.
  */
 public class ProxyChain {
