@@ -67,4 +67,13 @@ public class ConfigHelper {
     public static String getAppAssetPath(){
         return PropsUtil.getString(CONFIG_PROPS, ConfigConstant.APP_ASSET_PATH, "/asset/");
     }
+
+    /**
+     * 获取文件上传的最大限制
+     * 单位: M
+     * @return
+     */
+    public static int getAppFileUploadLimit(){
+        return PropsUtil.getInt(CONFIG_PROPS, ConfigConstant.APP_FILEUPLOAD_LIMIT, 10);
+    }
 }

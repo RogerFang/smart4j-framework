@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.lang.reflect.Method;
 
 /**
- * 切面代理
+ * 切面抽象类
  * 提供一些"钩子方法", 这些方法可以在子类中有选择性的实现
  * Created by Roger on 2016/11/24.
  */

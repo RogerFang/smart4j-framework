@@ -44,7 +44,7 @@ public final class AopHelper {
     }
 
     /**
-     * 获取"代理类"和"目标类集合"之间的对应关系
+     * 获取"切面类"和"目标类集合"之间的对应关系
      *
      * @return
      */
@@ -56,7 +56,7 @@ public final class AopHelper {
     }
 
     /**
-     * 代理类必须满足两个条件: 1.扩展AspectProxy抽象类; 2.还需要带有Aspect注解
+     * 切面类必须满足两个条件: 1.扩展AspectProxy抽象类; 2.还需要带有Aspect注解
      *
      * @param proxyMap
      */
@@ -80,8 +80,8 @@ public final class AopHelper {
     }
 
     /**
-     * 获取"目标类"与"代理对象"之间的映射关系
-     *
+     * 获取"目标类"与"切面类实例"之间的映射关系
+     * 一个目标类可能对应多个切面
      * @param proxyMap
      * @return
      */
@@ -91,7 +91,7 @@ public final class AopHelper {
             Class<?> proxyClass = entry.getKey();
             Set<Class<?>> targetClassSet = entry.getValue();
             for (Class<?> targetClass : targetClassSet) {
-                // 反射得到代理对象
+                // 反射得到切面类实例
                 Proxy proxy = (Proxy) proxyClass.newInstance();
                 if (targetMap.containsKey(targetClass)) {
                     targetMap.get(targetClass).add(proxy);
